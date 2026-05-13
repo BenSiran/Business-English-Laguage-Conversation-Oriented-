@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business English — Hadi | Arsess Steel</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=Vazirmatn:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --steel-dark:  #0B1724;
+    --steel:       #16304F;
+    --steel-mid:   #1E5C9A;
+    --steel-light: #C8DFF5;
+    --steel-pale:  #EBF4FD;
+    --gold:        #B8892A;
+    --gold-light:  #F5E9D0;
+    --gold-pale:   #FDF6E8;
+    --white:       #FFFFFF;
+    --off-white:   #F7F9FC;
+    --gray-100:    #F0F3F7;
+    --gray-300:    #C5CDD8;
+    --gray-500:    #7A8899;
+    --text:        #0D1B2A;
+    --green:       #145A35;
+    --green-bg:    #D6EEE2;
+    --red:         #8B1A1A;
+    --red-bg:      #FAE0E0;
+    --purple:      #3D1B7A;
+    --purple-bg:   #EAE0FA;
+    --teal:        #0E5C5C;
+    --teal-bg:     #D3EFEF;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--off-white);
+    color: var(--text);
+    line-height: 1.65;
+    font-size: 15px;
+  }
+
+  .fa {
+    font-family: 'Vazirmatn', sans-serif;
+    direction: rtl;
+    unicode-bidi: embed;
+  }
+
+  /* ── HEADER ── */
+  .site-header {
+    background: linear-gradient(135deg, var(--steel-dark) 0%, var(--steel) 60%, #1A3D6B 100%);
+    color: white;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .site-header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold), #F0C060, var(--gold));
+  }
+  .site-header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; left: 0; right: 0;
+    height: 1px;
+    background: rgba(184,137,42,0.4);
+  }
+  .header-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 48px 32px 40px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: end;
+  }
+  .header-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+  .header-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: white;
+    margin-bottom: 10px;
+  }
+  .header-subtitle {
+    font-size: 14px;
+    color: var(--steel-light);
+    font-weight: 300;
+  }
+  .header-subtitle .fa {
+    font-size: 13px;
+    color: rgba(200,223,245,0.8);
+  }
+  .header-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 10px;
+    padding: 16px 22px;
+    text-align: right;
+    min-width: 200px;
+  }
+  .header-card .role { font-size: 10px; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; }
+  .header-card .name { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: white; font-weight: 700; }
+  .header-card .company { font-size: 12px; color: var(--steel-light); }
+  .header-card .teacher { font-size: 11px; color: rgba(200,223,245,0.7); margin-top: 6px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 6px; }
+
+  /* ── LAYOUT ── */
+  .page { max-width: 960px; margin: 0 auto; padding: 40px 32px 80px; }
+
+  /* ── INTRO BOX ── */
+  .intro-box {
+    background: white;
+    border-left: 4px solid var(--steel-mid);
+    border-radius: 0 10px 10px 0;
+    padding: 20px 24px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 12px rgba(22,48,79,0.08);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .intro-box p { font-size: 14px; line-height: 1.7; color: var(--steel); }
+  .intro-box .fa { font-size: 13px; color: var(--steel-mid); }
+
+  /* ── QUICK REF TABLE ── */
+  .section-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--steel-dark);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--steel-light);
+  }
+  .section-title span.fa {
+    font-size: 20px;
+    color: var(--steel-mid);
+    font-family: 'Vazirmatn', sans-serif;
+  }
+
+  table.ref-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    font-size: 14px;
+    box-shadow: 0 4px 20px rgba(11,23,36,0.10);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  table.ref-table thead tr {
+    background: var(--steel-dark);
+    color: white;
+  }
+  table.ref-table thead th {
+    padding: 13px 16px;
+    text-align: left;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  table.ref-table thead th:last-child { text-align: right; }
+  table.ref-table tbody tr:nth-child(even) { background: var(--gray-100); }
+  table.ref-table tbody tr:nth-child(odd)  { background: white; }
+  table.ref-table tbody tr:hover { background: var(--steel-pale); }
+  table.ref-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--gray-300);
+    vertical-align: middle;
+  }
+  table.ref-table td:last-child { text-align: right; font-family: 'Vazirmatn', sans-serif; direction: rtl; font-size: 13px; color: var(--steel-mid); }
+  .modal-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+  .badge-can    { background: var(--green-bg);  color: var(--green); }
+  .badge-cant   { background: var(--red-bg);    color: var(--red); }
+  .badge-haveto { background: var(--steel-pale); color: var(--steel-mid); }
+  .badge-dont   { background: var(--teal-bg);   color: var(--teal); }
+
+  /* ── MODAL SECTIONS ── */
+  .modal-section {
+    margin-bottom: 48px;
+  }
+  .modal-header {
+    border-radius: 10px 10px 0 0;
+    padding: 18px 24px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 20px;
+  }
+  .modal-header.can    { background: linear-gradient(135deg, #145A35, #1E7A49); }
+  .modal-header.cant   { background: linear-gradient(135deg, #8B1A1A, #B22222); }
+  .modal-header.haveto { background: linear-gradient(135deg, #16304F, #1E5C9A); }
+  .modal-header.hasto  { background: linear-gradient(135deg, #3D1B7A, #5B2DB0); }
+  .modal-header.dont   { background: linear-gradient(135deg, #0E5C5C, #117A7A); }
+
+  .modal-word {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+    white-space: nowrap;
+  }
+  .modal-meaning-en {
+    font-size: 13px;
+    color: rgba(255,255,255,0.85);
+    font-weight: 300;
+  }
+  .modal-meaning-fa {
+    font-family: 'Vazirmatn', sans-serif;
+    font-size: 14px;
+    color: rgba(255,255,255,0.9);
+    direction: rtl;
+    text-align: right;
+    font-weight: 400;
+  }
+  .modal-form {
+    background: white;
+    border: 1px solid var(--gray-300);
+    border-top: none;
+    border-bottom: none;
+    padding: 12px 24px;
+    font-size: 13px;
+    color: var(--gray-500);
+  }
+  .modal-form strong { color: var(--text); }
+
+  /* ── EXAMPLES ── */
+  .examples-wrap {
+    border: 1px solid var(--gray-300);
+    border-top: 2px solid var(--gold);
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+  }
+  .example-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid var(--gray-300);
+  }
+  .example-row:last-child { border-bottom: none; }
+  .example-row:nth-child(even) { background: var(--gray-100); }
+  .example-row:nth-child(odd)  { background: white; }
+  .example-en {
+    padding: 11px 18px;
+    font-size: 14px;
+    color: var(--text);
+    border-right: 1px solid var(--gray-300);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .example-en::before {
+    content: '▸';
+    color: var(--gold);
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+  .example-fa {
+    padding: 11px 18px;
+    font-family: 'Vazirmatn', sans-serif;
+    font-size: 14px;
+    color: var(--steel-mid);
+    direction: rtl;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .example-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--steel-dark);
+  }
+  .example-header span {
+    padding: 8px 18px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--steel-light);
+    font-weight: 600;
+  }
+  .example-header span:last-child { text-align: right; direction: rtl; }
+
+  /* ── TIP BOX ── */
+  .tip-box {
+    margin-top: 12px;
+    padding: 14px 18px 14px 50px;
+    border-radius: 8px;
+    font-size: 13.5px;
+    line-height: 1.6;
+    position: relative;
+  }
+  .tip-box::before {
+    content: '💡';
+    position: absolute;
+    left: 16px;
+    top: 13px;
+    font-size: 16px;
+  }
+  .tip-box.gold   { background: var(--gold-pale);   border-left: 3px solid var(--gold); color: var(--steel-dark); }
+  .tip-box.red    { background: var(--red-bg);       border-left: 3px solid var(--red);  color: var(--red); }
+  .tip-box.blue   { background: var(--steel-pale);   border-left: 3px solid var(--steel-mid); color: var(--steel); }
+  .tip-box .fa    { display: block; margin-top: 4px; font-size: 13px; color: var(--steel-mid); }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 48px 0 24px;
+  }
+  .section-divider .num {
+    width: 44px; height: 44px;
+    background: var(--steel-mid);
+    color: white;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .section-divider .divider-text { flex: 1; }
+  .section-divider hr { border: none; border-top: 1.5px solid var(--steel-light); margin-top: 6px; }
+
+  /* ── COMPARISON TABLE ── */
+  table.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(11,23,36,0.09);
+    font-size: 13.5px;
+    margin-bottom: 40px;
+  }
+  table.cmp-table thead tr th {
+    padding: 12px 16px;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+  }
+  table.cmp-table thead th.c1 { background: var(--green); }
+  table.cmp-table thead th.c2 { background: var(--red); }
+  table.cmp-table thead th.c3 { background: var(--teal); }
+  table.cmp-table tbody tr:nth-child(even) td { background: var(--gray-100); }
+  table.cmp-table tbody tr:nth-child(odd)  td { background: white; }
+  table.cmp-table td {
+    padding: 12px 16px;
+    border: 1px solid var(--gray-300);
+    vertical-align: top;
+  }
+  table.cmp-table td .en { color: var(--text); margin-bottom: 4px; }
+  table.cmp-table td .fa-line { font-family: 'Vazirmatn', sans-serif; direction: rtl; font-size: 12.5px; color: var(--steel-mid); text-align: right; }
+
+  /* ── PRACTICE ── */
+  .practice-item {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 0;
+    margin-bottom: 12px;
+    border: 1px solid var(--gray-300);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 6px rgba(11,23,36,0.05);
+  }
+  .practice-num {
+    background: var(--steel-mid);
+    color: white;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .practice-body {
+    background: white;
+    padding: 14px 18px;
+    font-size: 14px;
+  }
+  .practice-body .q { color: var(--text); margin-bottom: 6px; }
+  .practice-body .q strong { color: var(--steel-mid); }
+  .practice-body .hint {
+    font-size: 12px;
+    color: var(--gray-500);
+    border-top: 1px dashed var(--gray-300);
+    padding-top: 6px;
+    margin-top: 6px;
+  }
+  .practice-body .hint .fa { font-size: 12px; color: var(--steel-mid); display: inline; }
+  .answer-line {
+    display: inline-block;
+    width: 120px;
+    border-bottom: 2px solid var(--gold);
+    margin: 0 4px;
+  }
+
+  /* ── ROLE PLAY ── */
+  table.roleplay-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(11,23,36,0.09);
+    font-size: 13.5px;
+    margin-bottom: 24px;
+  }
+  table.roleplay-table thead th {
+    background: var(--steel-dark);
+    color: var(--steel-light);
+    padding: 11px 16px;
+    text-align: left;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  table.roleplay-table thead th:last-child { text-align: right; }
+  table.roleplay-table tbody tr:nth-child(even) td { background: var(--gray-100); }
+  table.roleplay-table tbody tr:nth-child(odd)  td { background: white; }
+  table.roleplay-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--gray-300);
+    vertical-align: top;
+    font-size: 13.5px;
+  }
+  table.roleplay-table td:last-child {
+    font-family: 'Vazirmatn', sans-serif;
+    direction: rtl;
+    text-align: right;
+    color: var(--steel-mid);
+    font-size: 13px;
+  }
+  table.roleplay-table td em { color: var(--steel-mid); font-style: italic; }
+  table.roleplay-table td .modal-highlight { color: var(--steel-mid); font-weight: 600; }
+
+  /* ── SCENARIO BOX ── */
+  .scenario-box {
+    background: var(--purple-bg);
+    border-left: 4px solid var(--purple);
+    border-radius: 0 8px 8px 0;
+    padding: 16px 22px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .scenario-box .fa { font-size: 13px; color: var(--purple); }
+
+  /* ── FINAL NOTE ── */
+  .final-note {
+    background: linear-gradient(135deg, var(--gold-pale), #FEF9EE);
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .final-note p { font-size: 14px; line-height: 1.75; color: var(--steel-dark); }
+  .final-note .fa { font-size: 13.5px; color: var(--steel); }
+  .final-note .sig { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--gold); margin-top: 10px; font-style: italic; }
+
+  /* ── PRINT ── */
+  @media print {
+    body { background: white; }
+    .page { padding: 20px; }
+  }
+
+  @media (max-width: 680px) {
+    .header-inner { grid-template-columns: 1fr; }
+    .intro-box, .example-row, .example-header, .scenario-box, .final-note { grid-template-columns: 1fr; }
+    .modal-header { grid-template-columns: 1fr; }
+    table.cmp-table { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══ HEADER ══════════════════════════════════════════════════════════════ -->
+<header class="site-header">
+  <div class="header-inner">
+    <div>
+      <div class="header-label">Business English for Leaders</div>
+      <div class="header-title">Modal Verbs in the Boardroom</div>
+      <div class="header-subtitle">
+        CAN · CAN'T · HAVE TO · HAS TO · DON'T HAVE TO
+        <br><span class="fa">افعال وجهی در جلسات تجاری</span>
+      </div>
+    </div>
+    <div class="header-card">
+      <div class="role">Student</div>
+      <div class="name">Hadi</div>
+      <div class="company">CEO — Arsess Steel Company</div>
+      <div class="teacher">Teacher: Ben Siran</div>
+    </div>
+  </div>
+</header>
+
+<!-- ══ PAGE ════════════════════════════════════════════════════════════════ -->
+<div class="page">
+
+  <!-- INTRO -->
+  <div class="intro-box">
+    <p>In this lesson you will master <strong>five essential modal verbs</strong> used every day in business meetings, negotiations, and corporate communication: <strong>CAN, CAN'T, HAVE TO, HAS TO,</strong> and <strong>DON'T HAVE TO</strong>. Each section includes a Farsi definition, authentic boardroom examples, and a usage tip.</p>
+    <p class="fa">در این درس پنج فعل وجهی ضروری را یاد می‌گیرید که هر روز در جلسات تجاری، مذاکرات و مکاتبات شرکتی استفاده می‌شوند. هر بخش شامل معنای فارسی، مثال‌های واقعی از محیط کسب‌وکار و یک نکته کاربردی است.</p>
+  </div>
+
+  <!-- ══ QUICK REFERENCE ══ -->
+  <div class="section-label">Quick Reference — نگاه کلی</div>
+  <div class="section-title">Modal Verbs at a Glance <span class="fa">جدول مرجع سریع</span></div>
+
+  <table class="ref-table">
+    <thead>
+      <tr>
+        <th>Modal Verb</th>
+        <th>Meaning (English)</th>
+        <th>Negative Form</th>
+        <th>معنی (فارسی)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="modal-badge badge-can">CAN</span></td>
+        <td>Ability / Permission / Possibility</td>
+        <td>CAN'T / CANNOT</td>
+        <td class="fa">می‌توانم — توانایی / اجازه / امکان</td>
+      </tr>
+      <tr>
+        <td><span class="modal-badge badge-cant">CAN'T</span></td>
+        <td>Impossibility / Prohibition / Refusal</td>
+        <td>—</td>
+        <td class="fa">نمی‌توانم — ناتوانی / ممنوعیت</td>
+      </tr>
+      <tr>
+        <td><span class="modal-badge badge-haveto">HAVE TO</span></td>
+        <td>Obligation — I / You / We / They</td>
+        <td>DON'T HAVE TO</td>
+        <td class="fa">باید / مجبورم — اجبار (اول و دوم شخص)</td>
+      </tr>
+      <tr>
+        <td><span class="modal-badge badge-haveto">HAS TO</span></td>
+        <td>Obligation — He / She / It</td>
+        <td>DOESN'T HAVE TO</td>
+        <td class="fa">باید / مجبور است — اجبار (سوم شخص مفرد)</td>
+      </tr>
+      <tr>
+        <td><span class="modal-badge badge-dont">DON'T HAVE TO</span></td>
+        <td>No obligation — Optional / Free choice</td>
+        <td>—</td>
+        <td class="fa">لازم نیست — اختیاری است، اجباری نیست</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 1 — CAN
+  ══════════════════════════════════════════════════════════════════════════ -->
+  <div class="section-divider">
+    <div class="num">1</div>
+    <div class="divider-text">
+      <div class="section-label">Modal Verb</div>
+      <div class="section-title" style="margin-bottom:0;border:none;">CAN — <span class="fa">توانایی و اجازه</span></div>
+      <hr>
+    </div>
+  </div>
+
+  <div class="modal-section">
+    <div class="modal-header can">
+      <div class="modal-word">CAN</div>
+      <div>
+        <div style="color:rgba(255,255,255,0.6);font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">Meaning</div>
+        <div class="modal-meaning-en">Ability · Permission · Possibility</div>
+      </div>
+      <div class="modal-meaning-fa">می‌توانم<br><span style="font-size:12px;opacity:0.8;">توانایی / اجازه / امکان</span></div>
+    </div>
+    <div class="modal-form">
+      <strong>Form:</strong> Subject + <strong>can</strong> + base verb &nbsp;|&nbsp;
+      All persons: I / You / He / She / We / They + <strong>can</strong> (no change)
+    </div>
+    <div class="examples-wrap">
+      <div class="example-header">
+        <span>English Example</span>
+        <span>ترجمه فارسی</span>
+      </div>
+      <div class="example-row">
+        <div class="example-en">We can deliver the steel beams by Thursday.</div>
+        <div class="example-fa">ما می‌توانیم تیرآهن‌ها را تا پنج‌شنبه تحویل دهیم.</div>
+      </div>
+      <div class="example-row">
+        <div class="example-en">I can offer you a 5% discount on bulk orders.</div>
+        <div class="example-fa">می‌توانم برای سفارش‌های عمده ۵٪ تخفیف ارائه دهم.</div>
+      </div>
+      <div class="example-row">
+        <div class="example-en">Can we reschedule the board meeting to Friday?</div>
+        <div class="example-fa">آیا می‌توانیم جلسه هیئت مدیره را به جمعه موکول کنیم؟</div>
+      </div>
+      <div class="example-row">
+        <div class="example-en">Our engineers can finalize the contract specs this week.</div>
+        <div class="example-fa">مهندسان ما می‌توانند مشخصات قرارداد را این هفته نهایی کنند.</div>
+      </div>
+      <div class="example-row">
+        <div class="example-en">Can you send me the updated production report?</div>
+        <div class="example-fa">می‌توانید گزارش تولید به‌روز شده را برایم بفرستید؟</div>
+      </div>
+    </div>
+    <div class="tip-box gold">
+      <strong>Boardroom Tip:</strong> Use <strong>CAN</strong> to make offers and propose solutions confidently. "We <em>can</em> arrange a factory visit next week" sounds decisive and professional in negotiations.
+      <span class="fa">نکته: استفاده از CAN در مذاکرات اعتماد و قاطعیت شما را نشان می‌دهد. به‌جای «شاید بتوانیم» از «می‌توانیم» استفاده کنید.</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 2 — CAN'T
+  ══════════════════════════════════════════════════════════════════════════ -->
+  <div class="section-divider">
+    <div class="num" style="background:var(--red);">2</div>
+    <div class="divider-text">
+      <div class="section-label">Modal Verb</div>
+      <div class="section-title" style="margin-bottom:0;border:none;">CAN'T / CANNOT — <span class="fa">ناتوانی و ممنوعیت</span></div>
+      <hr>
+    </div>
+  </div>
+
+  <div class="modal-section">
+    <div class="modal-header cant">
+      <div class="modal-word">CAN'T</div>
+      <div>
+        <div style="color:rgba(255,255,255,0.6);font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">Meaning</div>
+        <div class="modal-meaning-en">Impossibility · Prohibition · Refusal</div>
+      </div>
+      <div class="modal-meaning-fa">نمی‌توانم<br><span style="font-size:12px;opacity:0.8;">ناتوانی / ممنوعیت / رد کردن</span></div>
+    </div>
+    <div class="modal-form">
+      <strong>Form:</strong> Subject + <strong>can't</strong> + base verb &nbsp;|&nbsp;
+      <strong>CANNOT</strong> (one word) = more formal — use in written contracts &amp; official letters
+    </div>
+    <div class="examples-wrap">
+      <div class="example-header">
+        <span>English Example</span>
+        <span>ترجمه فارسی</span>
+      </div>
+      <div class="example-row">
+        <div class="example-en">We can't accept these payment terms — they're not viable.</div>
+        <div class="example-fa">ما نمی‌توانیم این شرایط پرداخت را بپذیریم — قابل اجرا نیست.</div>
+      </div>
+      <div class="example-row">
+        <div class="example-en">I can't approve the budget without the board's signature.</div>
+        <div class="example-fa">بدون امضای هیئت مدیره نمی‌توانم بودجه را تصویب کنم.</div>
+      </div>
+      <div class="example-row">
+        <div class="example-en">The factory cannot operate at full capacity this quarter.</div>
+        <div class="example-fa">کارخانه در این سه‌ماهه نمی‌تواند با ظرفیت کامل کار کند.</div>
+      </div>
+      <div class="example-row">
+        <div class="example-en">We cannot guarantee delivery if the strike continues.</div>
+        <div class="example-fa">در صورت ادامه اعتصاب، نمی‌توانیم تحویل را تضمین کنیم.</div>
+      </div>
+      <div class="example-row">
+        <div class="example-en">I'm sorry, but we can't extend the deadline any further.</div>
+        <div class="example-fa">متأسفانه نمی‌توانیم مهلت را بیشتر از این تمدید کنیم.</div>
+      </div>
+    </div>
+    <div class="tip-box gold">
+      <strong>Boardroom Tip:</strong> In written documents and contracts, always prefer <strong>CANNOT</strong> (one word) — it reads as more firm and authoritative. In spoken meetings, <strong>can't</strong> is natural and fluent.
+      <span class="fa">نکته: در قراردادها و نامه‌های رسمی از CANNOT (یک کلمه) استفاده کنید — رسمی‌تر و محکم‌تر به نظر می‌رسد.</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 3 — HAVE TO
+  ══════════════════════════════════════════════════════════════════════════ -->
+  <div class="section-divider">
+    <div class="num" style="background:var(--steel-mid);">3</div>
+    <div class="divider-text">
+      <div class="section-label">Modal Verb</div>
+      <div class="section-title" style="margin-bottom:0;border:none;">HAVE TO — <span class="fa">اجبار و الزام</span></div>
+      <hr>
+    </div>
+  </div>
+
+  <div class="modal-section">
+    <div class="modal-header haveto">
+      <div class="modal-word">HAVE TO</div>
+      <div>
+        <div style="color:rgba(255,255,255,0.6);font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">Meaning</div>
+        <div class="modal-meaning-en">Obligation · Necessity — I / You / We / They</div>
+      </div>
+      <div class="modal-meaning-fa">باید / مجبورم<br><span style="font-size:12px;opacity:0.8;">اجبار / ضرورت (اول و دوم شخص)</span></div>
+    </div>
+    <div class="modal-form">
+      <strong>Form:</strong> I / You / We / They + <strong>have to</strong> + base verb &nbsp;|&nbsp;
+      Used for external rules, deadlines &amp; requirements imposed from outside
+    </div>
+    <div class="examples-wrap">
+      <div class="example-header">
+        <span>English Example</span>
+        <span>ترجمه فارسی</span>
+      </div>
+      <div class="example-row">
+        <div class="example-en">We have to submit the environmental compliance report by end of month.</div>
+        <div class="example-fa">باید تا آخر ماه گزارش انطباق زیست‌محیطی را ارائه دهیم.</div>
+      </div>
+      <div class="example-row">
+        <div class="example-en">I have to discuss this proposal with our legal team first.</div>
+        <div class="example-fa">ابتدا باید این پیشنهاد را با تیم حقوقی‌مان بررسی کنم.</div>
+      </div>
+      <div class="example-row">
+        <div class="example-en">You have to sign the NDA before we share the technical specifications.</div>
+        <div class="example-fa">قبل از اینکه مشخصات فنی را به اشتراک بگذاریم، باید توافقنامه محرمانگی را امضا کنید.</div>
+      </div>
+      <div class="example-row">
+        <div class="example-en">We have to reduce production costs by 10% this year.</div>
+        <div class="example-fa">امسال باید هزینه‌های تولید را ۱۰٪ کاهش دهیم.</div>
+      </div>
+      <div class="example-row">
+        <div class="example-en">They have to meet ISO standards to export to the EU.</div>
+        <div class="example-fa">برای صادرات به اتحادیه اروپا، باید با استانداردهای ایزو مطابقت داشته باشند.</div>
+      </div>
+    </div>
+    <div class="tip-box gold">
+      <strong>Boardroom Tip:</strong> <strong>HAVE TO</strong> implies an external obligation — a law, regulation, or client requirement. It is stronger than <em>"should"</em>. Use it when the obligation is non-negotiable.
+      <span class="fa">نکته: HAVE TO نشان‌دهنده یک اجبار خارجی است — قانون، مقررات یا الزام مشتری. قوی‌تر از «باید» معمولی و غیرقابل چانه‌زنی است.</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 4 — HAS TO
+  ══════════════════════════════════════════════════════════════════════════ -->
+  <div class="section-divider">
+    <div class="num" style="background:var(--purple);">4</div>
+    <div class="divider-text">
+      <div class="section-label">Modal Verb</div>
+      <div class="section-title" style="margin-bottom:0;border:none;">HAS TO — <span class="fa">اجبار برای سوم شخص</span></div>
+      <hr>
+    </div>
+  </div>
+
+  <div class="modal-section">
+    <div class="modal-header hasto">
+      <div class="modal-word">HAS TO</div>
+      <div>
+        <div style="color:rgba(255,255,255,0.6);font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">Meaning</div>
+        <div class="modal-meaning-en">Obligation · Necessity — He / She / It</div>
+      </div>
+      <div class="modal-meaning-fa">باید / مجبور است<br><span style="font-size:12px;opacity:0.8;">اجبار (سوم شخص مفرد)</span></div>
+    </div>
+    <div class="modal-form">
+      <strong>Form:</strong> He / She / It + <strong>has to</strong> + base verb &nbsp;|&nbsp;
+      Same meaning as HAVE TO — only the subject changes to 3rd person singular
+    </div>
+    <div class="examples-wrap">
+      <div class="example-header">
+        <span>English Example</span>
+        <span>ترجمه فارسی</span>
+      </div>
+      <div class="example-row">
+        <div class="example-en">The project manager has to present the timeline to the board.</div>
+        <div class="example-fa">مدیر پروژه باید برنامه زمانی را به هیئت مدیره ارائه دهد.</div>
+      </div>
+      <div class="example-row">
+        <div class="example-en">She has to approve all purchase orders above $50,000.</div>
+        <div class="example-fa">او باید تمام سفارش‌های خرید بالای ۵۰,۰۰۰ دلار را تأیید کند.</div>
+      </div>
+      <div class="example-row">
+        <div class="example-en">The supplier has to guarantee quality before we sign the contract.</div>
+        <div class="example-fa">تأمین‌کننده باید قبل از امضای قرارداد، کیفیت را تضمین کند.</div>
+      </div>
+      <div class="example-row">
+        <div class="example-en">He has to coordinate with the logistics team on the shipment schedule.</div>
+        <div class="example-fa">او باید برای برنامه ارسال با تیم لجستیک هماهنگ کند.</div>
+      </div>
+      <div class="example-row">
+        <div class="example-en">The new regulation has to be implemented by the third quarter.</div>
+        <div class="example-fa">مقررات جدید باید تا فصل سوم اجرایی شود.</div>
+      </div>
+    </div>
+    <div class="tip-box gold">
+      <strong>Boardroom Tip:</strong> When talking about a colleague's, client's, or partner's responsibility, use <strong>HAS TO</strong>. "The supplier <em>has to</em> meet our standards" is firm and professional.
+      <span class="fa">نکته: وقتی درباره مسئولیت شخص دیگری صحبت می‌کنید (او، مدیر، تأمین‌کننده)، از HAS TO استفاده کنید.</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 5 — DON'T HAVE TO
+  ══════════════════════════════════════════════════════════════════════════ -->
+  <div class="section-divider">
+    <div class="num" style="background:var(--teal);">5</div>
+    <div class="divider-text">
+      <div class="section-label">Modal Verb</div>
+      <div class="section-title" style="margin-bottom:0;border:none;">DON'T HAVE TO — <span class="fa">عدم الزام</span></div>
+      <hr>
+    </div>
+  </div>
+
+  <div class="modal-section">
+    <div class="modal-header dont">
+      <div class="modal-word" style="font-size:22px;">DON'T / DOESN'T HAVE TO</div>
+      <div>
+        <div style="color:rgba(255,255,255,0.6);font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">Meaning</div>
+        <div class="modal-meaning-en">No Obligation — Optional / Free Choice</div>
+      </div>
+      <div class="modal-meaning-fa">لازم نیست<br><span style="font-size:12px;opacity:0.8;">اختیاری است — اجباری نیست</span></div>
+    </div>
+    <div class="modal-form">
+      <strong>Forms:</strong>
+      I/You/We/They + <strong>don't have to</strong> &nbsp;|&nbsp;
+      He/She/It + <strong>doesn't have to</strong> &nbsp;|&nbsp;
+      ⚠ <strong>Not prohibition</strong> — just no requirement
+    </div>
+    <div class="examples-wrap">
+      <div class="example-header">
+        <span>English Example</span>
+        <span>ترجمه فارسی</span>
+      </div>
+      <div class="example-row">
+        <div class="example-en">You don't have to attend every meeting — just the key ones.</div>
+        <div class="example-fa">لازم نیست در هر جلسه‌ای شرکت کنید — فقط جلسات مهم.</div>
+      </div>
+      <div class="example-row">
+        <div class="example-en">We don't have to decide today — take time to review the offer.</div>
+        <div class="example-fa">لازم نیست امروز تصمیم بگیریم — وقت دارید پیشنهاد را بررسی کنید.</div>
+      </div>
+      <div class="example-row">
+        <div class="example-en">He doesn't have to submit a full report — a summary is sufficient.</div>
+        <div class="example-fa">لازم نیست گزارش کامل ارائه دهد — یک خلاصه کافی است.</div>
+      </div>
+      <div class="example-row">
+        <div class="example-en">They don't have to use our standard template for the proposal.</div>
+        <div class="example-fa">لازم نیست از قالب استاندارد ما برای پیشنهادیه استفاده کنند.</div>
+      </div>
+      <div class="example-row">
+        <div class="example-en">She doesn't have to travel to the factory — a video call works fine.</div>
+        <div class="example-fa">لازم نیست به کارخانه سفر کند — یک تماس ویدیویی کافی است.</div>
+      </div>
+    </div>
+    <div class="tip-box red" style="background:var(--red-bg);border-left-color:var(--red);">
+      ⚠ <strong>Critical Difference:</strong><br>
+      <strong>CAN'T</strong> = not allowed / prohibited = <span class="fa" style="display:inline;">ممنوع است</span><br>
+      <strong>DON'T HAVE TO</strong> = not required, but allowed = <span class="fa" style="display:inline;">لازم نیست، اما می‌توانید</span><br><br>
+      ❌ "You <strong>can't</strong> leave early." → You are <em>not allowed</em> to leave early.<br>
+      ✅ "You <strong>don't have to</strong> stay late." → Staying late is <em>not required</em>, but you can if you wish.
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 6 — COMPARISON
+  ══════════════════════════════════════════════════════════════════════════ -->
+  <div class="section-divider">
+    <div class="num" style="background:var(--gold);">6</div>
+    <div class="divider-text">
+      <div class="section-label">Comparison — مقایسه</div>
+      <div class="section-title" style="margin-bottom:0;border:none;">Side-by-Side Contrast <span class="fa">مقایسه تطبیقی</span></div>
+      <hr>
+    </div>
+  </div>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="c1">CAN ✅ — می‌توانم</th>
+        <th class="c2">CAN'T ❌ — نمی‌توانم</th>
+        <th class="c3">DON'T HAVE TO 🔵 — لازم نیست</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><div class="en">We can reduce the price.</div><div class="fa-line">می‌توانیم قیمت را کاهش دهیم.</div></td>
+        <td><div class="en">We can't go below cost price.</div><div class="fa-line">نمی‌توانیم زیر قیمت تمام‌شده برویم.</div></td>
+        <td><div class="en">We don't have to lower it today.</div><div class="fa-line">لازم نیست امروز آن را کاهش دهیم.</div></td>
+      </tr>
+      <tr>
+        <td><div class="en">I can approve this request.</div><div class="fa-line">می‌توانم این درخواست را تأیید کنم.</div></td>
+        <td><div class="en">I can't sign without legal review.</div><div class="fa-line">بدون بررسی حقوقی نمی‌توانم امضا کنم.</div></td>
+        <td><div class="en">I don't have to attend personally.</div><div class="fa-line">لازم نیست شخصاً حضور داشته باشم.</div></td>
+      </tr>
+      <tr>
+        <td><div class="en">He can lead the new project.</div><div class="fa-line">او می‌تواند پروژه جدید را رهبری کند.</div></td>
+        <td><div class="en">He can't miss the final deadline.</div><div class="fa-line">نمی‌تواند از مهلت نهایی تجاوز کند.</div></td>
+        <td><div class="en">He doesn't have to write the full report.</div><div class="fa-line">لازم نیست گزارش کامل بنویسد.</div></td>
+      </tr>
+      <tr>
+        <td><div class="en">We can offer flexible payment terms.</div><div class="fa-line">می‌توانیم شرایط پرداخت انعطاف‌پذیر ارائه دهیم.</div></td>
+        <td><div class="en">We can't extend credit beyond 60 days.</div><div class="fa-line">نمی‌توانیم اعتبار را بیش از ۶۰ روز تمدید کنیم.</div></td>
+        <td><div class="en">They don't have to pay upfront.</div><div class="fa-line">لازم نیست از ابتدا پیش‌پرداخت کنند.</div></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 7 — PRACTICE
+  ══════════════════════════════════════════════════════════════════════════ -->
+  <div class="section-divider">
+    <div class="num" style="background:var(--steel-dark);">7</div>
+    <div class="divider-text">
+      <div class="section-label">Practice — تمرین</div>
+      <div class="section-title" style="margin-bottom:0;border:none;">Boardroom Practice <span class="fa">تمرین جلسات تجاری</span></div>
+      <hr>
+    </div>
+  </div>
+
+  <p style="margin-bottom:20px;font-size:14px;color:var(--gray-500);">Complete the sentences with the correct modal verb. &nbsp;|&nbsp; <span class="fa" style="font-size:13px;">جمله‌ها را با فعل وجهی مناسب کامل کنید.</span></p>
+
+  <div class="practice-item">
+    <div class="practice-num">1</div>
+    <div class="practice-body">
+      <div class="q">We <span class="answer-line"></span> finalize the merger by Q4 — it's written in the contract. <em>(obligation)</em></div>
+      <div class="hint">💡 Hint: External obligation / الزام قراردادی → <strong>have to / has to</strong></div>
+    </div>
+  </div>
+
+  <div class="practice-item">
+    <div class="practice-num">2</div>
+    <div class="practice-body">
+      <div class="q">You <span class="answer-line"></span> attend the site visit — it's optional, but recommended. <em>(no obligation)</em></div>
+      <div class="hint">💡 Hint: No requirement, free choice / اختیاری است → <strong>don't have to</strong></div>
+    </div>
+  </div>
+
+  <div class="practice-item">
+    <div class="practice-num">3</div>
+    <div class="practice-body">
+      <div class="q">The CFO <span class="answer-line"></span> authorize all payments over $100,000 himself. <em>(he/she — obligation)</em></div>
+      <div class="hint">💡 Hint: 3rd person singular obligation / سوم شخص — اجبار → <strong>has to</strong></div>
+    </div>
+  </div>
+
+  <div class="practice-item">
+    <div class="practice-num">4</div>
+    <div class="practice-body">
+      <div class="q">We <span class="answer-line"></span> accept these terms — they violate our safety standards. <em>(prohibition / impossible)</em></div>
+      <div class="hint">💡 Hint: Not possible / ممنوع یا غیرممکن → <strong>can't / cannot</strong></div>
+    </div>
+  </div>
+
+  <div class="practice-item">
+    <div class="practice-num">5</div>
+    <div class="practice-body">
+      <div class="q"><span class="answer-line"></span> we arrange a factory tour for the investors next week? <em>(offer / ability)</em></div>
+      <div class="hint">💡 Hint: Offering / making a suggestion / پیشنهاد دادن → <strong>Can</strong></div>
+    </div>
+  </div>
+
+  <div class="practice-item">
+    <div class="practice-num">6</div>
+    <div class="practice-body">
+      <div class="q">She <span class="answer-line"></span> rewrite the entire proposal — just update the financial section. <em>(not required)</em></div>
+      <div class="hint">💡 Hint: Not necessary / لازم نیست → <strong>doesn't have to</strong></div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       SECTION 8 — ROLE PLAY
+  ══════════════════════════════════════════════════════════════════════════ -->
+  <div class="section-divider">
+    <div class="num" style="background:var(--purple);">8</div>
+    <div class="divider-text">
+      <div class="section-label">Role Play — نقش‌آفرینی</div>
+      <div class="section-title" style="margin-bottom:0;border:none;">CEO Scenario <span class="fa">سناریوی مدیرعامل</span></div>
+      <hr>
+    </div>
+  </div>
+
+  <div class="scenario-box">
+    <p>You are <strong>Hadi</strong>, CEO of <strong>Arsess Steel Company</strong>, in a meeting with a potential European client. They are requesting faster delivery, a lower price, and monthly financial reports. Respond professionally using the modal verbs from this lesson.</p>
+    <p class="fa">شما هادی، مدیرعامل شرکت آرسس فولاد هستید، در جلسه‌ای با یک مشتری اروپایی. آن‌ها تقاضای تحویل سریع‌تر، قیمت پایین‌تر و گزارش‌های مالی ماهانه دارند. با استفاده از افعال وجهی این درس، حرفه‌ای پاسخ دهید.</p>
+  </div>
+
+  <table class="roleplay-table">
+    <thead>
+      <tr>
+        <th>Client Says</th>
+        <th>Hadi's Response (modal verbs in bold)</th>
+        <th>ترجمه فارسی</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><em>"Can you deliver in two weeks?"</em></td>
+        <td>We <span class="modal-highlight">can</span> deliver in three weeks, but we <span class="modal-highlight">can't</span> guarantee two weeks without additional cost.</td>
+        <td class="fa">می‌توانیم در سه هفته تحویل دهیم، اما بدون هزینه اضافی، دو هفته ممکن نیست.</td>
+      </tr>
+      <tr>
+        <td><em>"Can you lower the price by 15%?"</em></td>
+        <td>We <span class="modal-highlight">can</span> offer 7%, but we <span class="modal-highlight">can't</span> go lower — our production costs <span class="modal-highlight">have to</span> be covered.</td>
+        <td class="fa">می‌توانیم ۷٪ تخفیف بدهیم، اما بیشتر امکان ندارد — باید هزینه‌های تولید پوشش داده شود.</td>
+      </tr>
+      <tr>
+        <td><em>"Do we have to sign the contract today?"</em></td>
+        <td>No, you <span class="modal-highlight">don't have to</span> sign today. Take the weekend to review — we <span class="modal-highlight">can</span> meet again on Monday.</td>
+        <td class="fa">نه، لازم نیست امروز امضا کنید. آخر هفته را برای بررسی وقت دارید — می‌توانیم دوشنبه دوباره ملاقات کنیم.</td>
+      </tr>
+      <tr>
+        <td><em>"Who has to approve this deal?"</em></td>
+        <td>Our CFO <span class="modal-highlight">has to</span> approve all contracts of this value. I <span class="modal-highlight">can't</span> finalize it alone.</td>
+        <td class="fa">مدیر مالی ما باید تمام قراردادهای این مبلغ را تأیید کند. من به‌تنهایی نمی‌توانم آن را نهایی کنم.</td>
+      </tr>
+      <tr>
+        <td><em>"Do we have to send monthly reports?"</em></td>
+        <td>You <span class="modal-highlight">don't have to</span> send monthly reports — quarterly is sufficient. However, our auditor <span class="modal-highlight">has to</span> verify the annual accounts.</td>
+        <td class="fa">لازم نیست گزارش‌های ماهانه بفرستید — سه‌ماهه کافی است. اما حسابرس ما باید حساب‌های سالانه را تأیید کند.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- FINAL NOTE -->
+  <div class="final-note">
+    <div>
+      <p><strong>Well done, Hadi!</strong> Mastering these five modal verbs will give you the precision and authority of a world-class business leader in every English meeting and negotiation. This week, practice <em>one modal verb per day</em> in your real meetings at Arsess Steel.</p>
+      <div class="sig">— Teacher Ben Siran</div>
+    </div>
+    <div>
+      <p class="fa"><strong>آفرین هادی!</strong> تسلط بر این پنج فعل وجهی به شما قدرت و دقت یک رهبر تجاری جهانی را در هر جلسه و مذاکره به زبان انگلیسی می‌دهد. این هفته هر روز یک فعل وجهی را در جلسات واقعی شرکت آرسس فولاد تمرین کنید.</p>
+      <div class="sig fa" style="font-family:'Vazirmatn',sans-serif;font-style:normal;font-size:15px;margin-top:10px;">— استاد بن سیران</div>
+    </div>
+  </div>
+
+</div><!-- /page -->
+</body>
+</html>
